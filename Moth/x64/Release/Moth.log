@@ -1,2 +1,6 @@
-﻿  MothApp.cpp
-C:\Users\tejad\source\repos\CS_395_Project\glad\include\glad\glad.h(27,1): fatal error C1189: #error:  OpenGL header already included, remove this include, glad already provides it
+﻿     Creating library C:\Users\tejad\source\repos\CS_395_Project\x64\Release\Moth.lib and object C:\Users\tejad\source\repos\CS_395_Project\x64\Release\Moth.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 133 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Moth.vcxproj -> C:\Users\tejad\source\repos\CS_395_Project\x64\Release\Moth.dll

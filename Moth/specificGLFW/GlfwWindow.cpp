@@ -9,9 +9,6 @@ namespace Moth
 		if (!glfwInit())
 			MOTH_LOG("Error: GLFW failed to initialize!");
 		
-		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-			MOTH_LOG("Error: GLAD failed to initialize!");
-
 	}
 
 	bool GlfwWindow::CreateWindow(int width, int height, const std::string& windowName)
@@ -25,6 +22,9 @@ namespace Moth
 		}
 
 		glfwMakeContextCurrent(mGlfwWindow);
+
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+			MOTH_LOG("Error: GLAD failed to initialize!");
 
 		return true;
 	}

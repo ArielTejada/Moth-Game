@@ -3,8 +3,9 @@
 
 #include "MothApp.h"
 #include "GameWindow.h"
-#include "GLFW/glfw3.h"
+
 #include "glad/glad.h"
+#include "GLFW/glfw3.h"
 
 namespace Moth 
 {
@@ -39,18 +40,84 @@ namespace Moth
 		glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW);
 
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
 		glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GL_FLOAT), (void*)0);
 		glEnableVertexAttribArray(0);
 
 		// =============================================================================
 
-		std::string vertex_code{ R"()" };
+		const char* vertexShader = R"(
+		#version 330 core
+		layout (location = 0) in vec2 rawCoords
+
+		void main ()
+		{
+			gl_Position = vec4(rawCoords.x, rawCoords.y, 0.0f, 1.0f);
+		}
+
+		)";
+
+		const char* fragmentShader = R"(
+		#version 330 core
+		out vec4 fragColor
+
+		void main ()
+		{
+			fragColor = vec4(0.0f, 1.0f, 0.0f, 1.0f)
+		}
+
+		)";
+
+
+		/*
+		unsigned int vertexProg = glCreateShader(GL_VERTEX_SHADER);
+		glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+		glCompileShader(vertexShader);
+		// check for shader compile errors
+		int success;
+		char infoLog[512];
+		glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+		if (!success)
+		{
+			glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+			std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+		}
+		// fragment shader
+		unsigned int fragmentProg = glCreateShader(GL_FRAGMENT_SHADER);
+		glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+		glCompileShader(fragmentShader);
+		// check for shader compile errors
+		glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+		if (!success)
+		{
+			glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+			std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+		}
+		// link shaders
+		unsigned int shaderProgram = glCreateProgram();
+		glAttachShader(shaderProgram, vertexShader);
+		glAttachShader(shaderProgram, fragmentShader);
+		glLinkProgram(shaderProgram);
+		// check for linking errors
+		glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+		if (!success) {
+			glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+			std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+		}
+		glDeleteShader(vertexProg);
+		glDeleteShader(fragmentProg);
+
+		*/
 
 		while (true) 
 		{
 			OnUpdate();
+
+			//glUseProgram(shaderProgram);
+			//glBindVertexArray(VAO);
+			//glDrawArrays(GL_TRIANGLES, 0, 4);
+
 
 			Moth::GameWindow::GetWindow()->SwapBuffers();
 			Moth::GameWindow::GetWindow()->CollectEvents();

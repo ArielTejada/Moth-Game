@@ -108,7 +108,7 @@
       <Project>{0805be85-9e6d-4852-88dc-609857504aa4}</Project>
     </ProjectReference>
     <ProjectReference Include="..\glfw\build\src\glfw.vcxproj">
-      <Project>{c4ccdca1-7d9a-3879-84cb-aed1b83c154e}</Project>
+      <Project>{dcb297ad-9b68-3240-b819-4cca14e997b9}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

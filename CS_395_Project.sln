@@ -7,9 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS_395_Project", "CS_395_Pr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Moth", "Moth\Moth.vcxproj", "{3EF68D02-CFB4-4748-B481-F7AFAB5CEEDC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "glfw\build\src\glfw.vcxproj", "{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "glad\glad.vcxproj", "{0805BE85-9E6D-4852-88DC-609857504AA4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "glfw\build\src\glfw.vcxproj", "{DCB297AD-9B68-3240-B819-4CCA14E997B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,22 +55,6 @@ Global
 		{3EF68D02-CFB4-4748-B481-F7AFAB5CEEDC}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{3EF68D02-CFB4-4748-B481-F7AFAB5CEEDC}.RelWithDebInfo|x86.ActiveCfg = Release|x64
 		{3EF68D02-CFB4-4748-B481-F7AFAB5CEEDC}.RelWithDebInfo|x86.Build.0 = Release|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Debug|x64.ActiveCfg = Debug|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Debug|x64.Build.0 = Debug|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Debug|x86.ActiveCfg = Debug|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Debug|x86.Build.0 = Debug|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.MinSizeRel|x86.Build.0 = MinSizeRel|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Release|x64.ActiveCfg = Release|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Release|x64.Build.0 = Release|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Release|x86.ActiveCfg = Release|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.Release|x86.Build.0 = Release|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
-		{C4CCDCA1-7D9A-3879-84CB-AED1B83C154E}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|x64
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.Debug|x64.ActiveCfg = Debug|x64
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.Debug|x64.Build.0 = Debug|x64
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.Debug|x86.ActiveCfg = Debug|Win32
@@ -87,6 +71,22 @@ Global
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{0805BE85-9E6D-4852-88DC-609857504AA4}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Debug|x64.ActiveCfg = Debug|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Debug|x64.Build.0 = Debug|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Debug|x86.ActiveCfg = Debug|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Debug|x86.Build.0 = Debug|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.MinSizeRel|x86.ActiveCfg = MinSizeRel|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.MinSizeRel|x86.Build.0 = MinSizeRel|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Release|x64.ActiveCfg = Release|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Release|x64.Build.0 = Release|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Release|x86.ActiveCfg = Release|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.Release|x86.Build.0 = Release|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x64
+		{DCB297AD-9B68-3240-B819-4CCA14E997B9}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
