@@ -1,0 +1,4 @@
+﻿  MothApp.cpp
+C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\Moth\MothApp.cpp(6,7): error C2653: 'MothApp': is not a class or namespace name
+C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\Moth\MothApp.cpp(8,3): error C3861: 'MOTH_LOG': identifier not found
+C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\Moth\MothApp.cpp(12,4): error C3861: 'OnUpdate': identifier not found

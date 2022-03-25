@@ -1,0 +1,26 @@
+set(HEADER_FILES
+	Moth.h 
+	MothApp.h 
+	MothUtil.h
+	GameWindow.h
+	WindowImplementation.h
+	specificGLFW/GlfwWindow.h
+	)
+
+set(SOURCE_FILES 
+	AirApp.cpp
+	GameWindow.cpp
+	specificGLFW/GlfwWindow.cpp
+	)
+
+add_library(Moth SHARED ${HEADER_FILES} ${SOURCE_FILES})
+
+add_definitions(-DMOTH_LIB)
+add_definitions(-DMOTH_DEBUG)
+
+include_directories(../glfw/include)
+include_directories(../Moth)
+
+target_precompile_headers(Moth PRIVATE pch.h)
+
+target_link_libraries(Moth glfw)

@@ -1,0 +1,4 @@
+﻿  main.cpp
+     Creating library C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\x64\Debug\CS_395_Project.lib and object C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\x64\Debug\CS_395_Project.exp
+main.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Moth::MothApp::OnUpdate(void)" (?OnUpdate@MothApp@Moth@@UEAAXXZ)
+C:\Users\tejad\Documents\Visual Studio 2022\Projects\CS_395_Project\x64\Debug\CS_395_Project.exe : fatal error LNK1120: 1 unresolved externals
