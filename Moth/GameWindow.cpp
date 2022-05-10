@@ -44,6 +44,16 @@ namespace Moth
 		return mWindow->GetHeight();
 	}
 
+	void GameWindow::SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback)
+	{
+		mWindow->SetKeyPressedCallback(keyPressedCallback);
+	}
+
+	void GameWindow::SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback)
+	{
+		mWindow->SetKeyReleasedCallback(keyReleasedCallback);
+	}
+
 	GameWindow::GameWindow()
 	{
 		#ifdef MOTH_WINDOWS

@@ -2,6 +2,7 @@
 
 #include "WindowImplementation.h"
 #include "MothUtil.h"
+#include "Events.h"
 
 namespace Moth
 {
@@ -16,6 +17,9 @@ namespace Moth
 		void CollectEvents();
 		int GetWidth() const;
 		int GetHeight() const;
+
+		void SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback);
+		void SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback);
 
 	private:
 		inline static GameWindow* mInstance{ nullptr };

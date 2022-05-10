@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>C:\Users\tejad\source\repos\CS_395_Project\x64\Release\glad.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\tejad\source\repos\CS_395_Project\x64\Release\glfw3.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>

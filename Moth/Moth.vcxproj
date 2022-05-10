@@ -53,12 +53,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>MOTH_LIB;MOTH_WINDOWS;MOTH_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MOTH_LIB;MOTH_OPENGL;MOTH_WINDOWS;MOTH_DEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)glad\include;$(SolutionDir)glfw\include;$(SolutionDir)Moth;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)glad\include;$(SolutionDir)glfw\include;$(SolutionDir)stbi;$(SolutionDir)Moth;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -71,12 +71,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>MOTH_LIB;MOTH_WINDOWS;MOTH_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MOTH_LIB;MOTH_OPENGL;MOTH_WINDOWS;MOTH_DEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)glad\include;$(SolutionDir)glfw\include;$(SolutionDir)Moth;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)glad\include;$(SolutionDir)glfw\include;$(SolutionDir)stbi;$(SolutionDir)Moth;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -86,22 +86,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Events.h" />
     <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="KeyCodes.h" />
     <ClInclude Include="Moth.h" />
     <ClInclude Include="MothApp.h" />
     <ClInclude Include="MothUtil.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RendererImplementation.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderImplementation.h" />
     <ClInclude Include="specificGLFW\GlfwWindow.h" />
+    <ClInclude Include="specificOpenGL\OpenGLRenderer.h" />
+    <ClInclude Include="specificOpenGL\OpenGLShader.h" />
+    <ClInclude Include="specificOpenGL\OpenGLSprite.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteImplementation.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="MothApp.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="specificGLFW\GlfwWindow.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLSprite.cpp" />
+    <ClCompile Include="Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\glad\glad.vcxproj">
@@ -109,6 +127,9 @@
     </ProjectReference>
     <ProjectReference Include="..\glfw\build\src\glfw.vcxproj">
       <Project>{dcb297ad-9b68-3240-b819-4cca14e997b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\stbi\stbi.vcxproj">
+      <Project>{2060765b-6efe-46ec-a0d9-304f800ecb64}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
