@@ -1,8 +1,10 @@
 #pragma once
 
+#include "MothUtil.h"
+
 namespace Moth 
 {
-	class KeyPressedEvent
+	class MOTH_API KeyPressedEvent
 	{
 	public:
 		KeyPressedEvent(int codeOfKey);
@@ -14,7 +16,7 @@ namespace Moth
 		int mKeyCode;
 	};
 
-	class KeyReleasedEvent
+	class MOTH_API KeyReleasedEvent
 	{
 	public:
 		KeyReleasedEvent(int codeOfKey);

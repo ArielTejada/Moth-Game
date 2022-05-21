@@ -4,13 +4,10 @@
 
 namespace Moth
 {
-
 	void GameWindow::Init()
 	{
 		if (mInstance == nullptr)
 			mInstance = new GameWindow;
-
-
 	}
 
 	GameWindow* GameWindow::GetWindow()
@@ -21,7 +18,7 @@ namespace Moth
 
 	bool GameWindow::CreateWindow(int width, int height, const std::string& windowName)
 	{
-		return mWindow->CreateWindow(800, 600, "Spring 2022");
+		return mWindow->CreateWindow(width, height, "Spring 2022");
 	}
 
 	void GameWindow::SwapBuffers()

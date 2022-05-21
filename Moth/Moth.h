@@ -6,6 +6,7 @@
 #include "Shader.h"
 #include "Renderer.h"
 #include "KeyCodes.h"
+#include "Events.h"
 
 #define MOTH_APPLICATION_START(classname) \
 \

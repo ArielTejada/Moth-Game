@@ -11,6 +11,7 @@ namespace Moth
 	class MOTH_API MothApp
 	{
 	public: 
+		MothApp();
 		void Run();
 		virtual void OnUpdate();
 		void SetKeyPressedCallback(std::function<void(const KeyPressedEvent &)> keyPressedCallback);

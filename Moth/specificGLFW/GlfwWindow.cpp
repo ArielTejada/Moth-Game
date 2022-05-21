@@ -1,4 +1,6 @@
 #include "pch.h"
+
+#include "glad/glad.h"
 #include "GlfwWindow.h"
 #include "MothUtil.h"
 
@@ -8,7 +10,6 @@ namespace Moth
 	{
 		if (!glfwInit())
 			MOTH_LOG("Error: GLFW failed to initialize!");
-		
 	}
 
 	bool GlfwWindow::CreateWindow(int width, int height, const std::string& windowName)

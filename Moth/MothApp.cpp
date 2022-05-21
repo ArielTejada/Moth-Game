@@ -10,36 +10,26 @@
 
 namespace Moth 
 {
-	void MothApp::Run()
+	MothApp::MothApp()
 	{
 		MOTH_LOG("MothApp Running...\n");
 
 		Moth::GameWindow::Init();
 
-		Moth::GameWindow::GetWindow()->CreateWindow(800, 600, "game window");
+		Moth::GameWindow::GetWindow()->CreateWindow(1200, 700, "game window");
 
 		Renderer::Init();
+	}
 
-		Moth::Sprite star{"../Moth/Assets/Images/Moth2.png"};
-
+	void MothApp::Run()
+	{
 		mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
-
-		int x{ 50 }, y{ 50 };
-		auto keyCall = [&x](const KeyPressedEvent& event) {
-			if (event.GetKeyCode() == MOTH_KEY_LEFT) x -= 5;
-			else if(event.GetKeyCode() == MOTH_KEY_RIGHT) x += 5;
-		};
-		auto keyRelease = [](const KeyReleasedEvent& event) {MOTH_LOG(event.GetKeyCode()); };
-		SetKeyPressedCallback(keyCall);
-		//SetKeyReleasedCallback(keyRelease);
 
 		while (true) 
 		{
-			OnUpdate();
-
 			Renderer::ClearScreen();
 
-			Renderer::Draw(star, x, y, 1);
+			OnUpdate();
 
 			std::this_thread::sleep_until(mNextFrameTime);
 
@@ -52,6 +42,7 @@ namespace Moth
 
 	void MothApp::OnUpdate()
 	{
+
 	}
 
 	void MothApp::SetKeyPressedCallback(std::function<void(const KeyPressedEvent&)> keyPressedCallback)

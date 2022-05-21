@@ -6,7 +6,7 @@
 
 namespace Moth
 {
-	Moth::OpenGLSprite::OpenGLSprite(const std::string& file)
+	OpenGLSprite::OpenGLSprite(const std::string& file)
 	{
 		stbi_set_flip_vertically_on_load(true);
 

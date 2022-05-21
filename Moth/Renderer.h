@@ -16,7 +16,6 @@ namespace Moth
 
 	private:
 		inline static Renderer* mInstance{ nullptr };
-
 		RendererImplementation* mImplementation{ nullptr };
 
 		Renderer();

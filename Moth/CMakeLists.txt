@@ -14,10 +14,12 @@ set(HEADER_FILES
 	specificOpenGL/OpenGLSprite.h
 	specificOpenGL/OpenGLShader.h
 	specificOpenGL/OpenGLRenderer.h
+	Events.h
+	KeyCodes.h
 	)
 
 set(SOURCE_FILES 
-	AirApp.cpp
+	MothApp.cpp
 	GameWindow.cpp
 	specificGLFW/GlfwWindow.cpp
 	Sprite.cpp
@@ -26,6 +28,7 @@ set(SOURCE_FILES
 	specificOpenGL/OpenGLSprite.cpp
 	specificOpenGL/OpenGLShader.cpp
 	specificOpenGL/OpenGLRenderer.cpp
+	Events.cpp
 	)
 
 add_library(Moth SHARED ${HEADER_FILES} ${SOURCE_FILES})
