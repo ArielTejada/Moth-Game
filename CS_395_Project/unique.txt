@@ -1,0 +1,11 @@
+Ariel Tejada
+12142319
+
+I created my hero (moth) entity and multiple rain drop (enemies) 
+which fall down at different speeds. They don't bounce off the ground, 
+new raindrops spawn when the raindrop hits the ground. I also added
+animations to the hero. When the moth flies around the game window
+its wings flap making it look real. It also faces the direction its 
+moving in. I also added a health bar which allows the player to be hit 3
+times before the game ends. I also added a win condition (making it under 
+a flog umbrella.

@@ -114,14 +114,26 @@ void SpringApp::OnUpdate()
 	// lose condition
 	for (int i = 0; i < 5; i++)
 	{
-		if (Collide(mHero, mDangers[i]))
+		if (Collide(mHero, mDangers[i]) && (healthBar.GetActiveImage() == 0))
+		{
+			healthBar.SetActiveImage(1);
+			mDangers[i].SetY(620);
+		}
+
+		if (Collide(mHero, mDangers[i]) && (healthBar.GetActiveImage() == 1))
+		{
+			healthBar.SetActiveImage(2);
+			mDangers[i].SetY(620);
+		}
+
+		if (Collide(mHero, mDangers[i]) && (healthBar.GetActiveImage() == 2))
 		{
 			exit(0);
 		}
 	}
 
 	// win condition
-	if (mHero.GetX() > Moth::GameWindow::GetWindow()->GetWidth())
+	if (mHero.GetX() > Moth::GameWindow::GetWindow()->GetWidth() && (mHero.GetY() < Moth::GameWindow::GetWindow()->GetHeight() - 400))
 	{
 		exit(0);
 	}
@@ -130,6 +142,8 @@ void SpringApp::OnUpdate()
 	mHero.Draw();
 	umbrella.SetX(800);
 	umbrella.Draw();
+	healthBar.SetY(600);
+	healthBar.Draw();
 
 	for (int i = 0; i < 5; i++)
 	{

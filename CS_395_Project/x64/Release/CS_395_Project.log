@@ -1,7 +1,1 @@
-﻿  SpringApp.cpp
-  Generating code
-  0 of 286 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  CS_395_Project.vcxproj -> C:\Users\tejad\source\repos\CS_395_Project\x64\Release\CS_395_Project.exe
+﻿LINK : fatal error LNK1181: cannot open input file 'C:\Users\tejad\source\repos\CS_395_Project\x64\Release\Moth.lib'

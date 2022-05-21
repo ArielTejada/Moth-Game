@@ -14,6 +14,7 @@ public:
 
 private:
 	Entity background{ {"Assets/Images/Background1.png"}};
+	Entity healthBar{ {"Assets/Images/HealthFull.png", "Assets/Images/Health1Hit.png", "Assets/Images/Health2Hit.png" }};
 	Entity mHero{ {"Assets/Images/MothLeft.png", "Assets/Images/MothLeftFlap.png", "Assets/Images/MothRight.png",
 		"Assets/Images/MothRightFlap.png", "Assets/Images/MothUp.png", "Assets/Images/MothUpFlap.png"} };
 	Entity umbrella{ {"Assets/Images/umbrella.png"}};
