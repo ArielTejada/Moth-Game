@@ -45,3 +45,7 @@ include_directories(../glad/include)
 target_precompile_headers(Moth PRIVATE pch.h)
 
 target_link_libraries(Moth glfw glad stbi)
+
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Moth)
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Debug)
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Release)

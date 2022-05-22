@@ -165,13 +165,13 @@ bool SpringApp::Collide(const Entity& one, const Entity& another)
 	int anotherTop{ another.GetY() + another.GetHeight() };
 
 	bool collideX{ false };
-	if ((oneLeft <= anotherLeft and anotherLeft <= oneRight) or
-		(anotherLeft <= oneLeft and oneLeft <= anotherRight))
+	if ((oneLeft <= anotherLeft && anotherLeft <= oneRight) ||
+		(anotherLeft <= oneLeft && oneLeft <= anotherRight))
 		collideX = true;
 
 	bool collideY{ false };
-	if ((oneBottom <= anotherBottom and anotherBottom <= oneTop) or
-		(anotherBottom <= oneBottom and oneBottom <= anotherTop))
+	if ((oneBottom <= anotherBottom && anotherBottom <= oneTop) ||
+		(anotherBottom <= oneBottom && oneBottom <= anotherTop))
 		collideY = true;
 
 	return collideX and collideY;

@@ -1,1 +1,16 @@
-﻿LINK : fatal error LNK1181: cannot open input file 'C:\Users\tejad\source\repos\CS_395_Project\x64\Release\glad.lib'
+﻿  pch.cpp
+  Events.cpp
+  GameWindow.cpp
+  MothApp.cpp
+C:\Users\tejad\source\repos\CS_395_Project\Moth\MothApp.h(21,29): warning C4251: 'Moth::MothApp::mFrameDuration': class 'std::chrono::duration<__int64,std::milli>' needs to have dll-interface to be used by clients of class 'Moth::MothApp'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(533): message : see declaration of 'std::chrono::duration<__int64,std::milli>'
+C:\Users\tejad\source\repos\CS_395_Project\Moth\MothApp.h(22,41): warning C4251: 'Moth::MothApp::mNextFrameTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Moth::MothApp'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
+  Renderer.cpp
+  Shader.cpp
+  GlfwWindow.cpp
+  OpenGLRenderer.cpp
+  OpenGLShader.cpp
+  OpenGLSprite.cpp
+  Sprite.cpp
+LINK : fatal error LNK1181: cannot open input file 'C:\Users\tejad\source\repos\CS_395_Project\x64\Release\glad.lib'
