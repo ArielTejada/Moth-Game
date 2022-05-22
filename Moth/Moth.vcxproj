@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\glad\glad.vcxproj">
-      <Project>{0805be85-9e6d-4852-88dc-609857504aa4}</Project>
+      <Project>{8aec1499-e1a3-42b9-be23-4cac6e96a391}</Project>
     </ProjectReference>
     <ProjectReference Include="..\glfw\build\src\glfw.vcxproj">
       <Project>{dcb297ad-9b68-3240-b819-4cca14e997b9}</Project>
