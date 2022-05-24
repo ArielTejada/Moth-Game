@@ -22,6 +22,21 @@ SpringApp::SpringApp()
 				mVerticalSpeed = -10;
 				mHero.SetActiveImage(4);
 				break;
+			case MOTH_KEY_SPACE:
+				if (win_Lose_Screen.GetActiveImage() == 1 || win_Lose_Screen.GetActiveImage() == 2)
+				{
+					exit(0);
+				}
+					
+			case MOTH_KEY_ENTER:
+				if (win_Lose_Screen.GetActiveImage() == 1 || win_Lose_Screen.GetActiveImage() == 2)
+				{
+					mHero.SetX(0);
+					mHero.SetY(0);
+					win_Lose_Screen.SetActiveImage(0);
+					healthBar.SetActiveImage(0);
+				}
+					
 			}
 			});
 
@@ -31,7 +46,7 @@ SpringApp::SpringApp()
 		});
 
 	int x = 250;
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		mDangers[i].SetX(x);
 		mDangers[i].SetY(400);
@@ -111,8 +126,15 @@ void SpringApp::OnUpdate()
 
 	mDangers[4].SetY(mDangers[4].GetY() + mEnemyVSpeed4);
 
+	if (mDangers[5].GetY() < 0)
+		mDangers[5].SetY(620);
+	else if (mDangers[5].GetY() > Moth::GameWindow::GetWindow()->GetHeight() - mDangers[5].GetHeight())
+		mEnemyVSpeed5 *= -1;
+
+	mDangers[5].SetY(mDangers[5].GetY() + mEnemyVSpeed5);
+
 	// lose condition
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (Collide(mHero, mDangers[i]) && (healthBar.GetActiveImage() == 0))
 		{
@@ -128,14 +150,14 @@ void SpringApp::OnUpdate()
 
 		if (Collide(mHero, mDangers[i]) && (healthBar.GetActiveImage() == 2))
 		{
-			exit(0);
+			win_Lose_Screen.SetActiveImage(1);
 		}
 	}
 
 	// win condition
 	if (mHero.GetX() > Moth::GameWindow::GetWindow()->GetWidth() && (mHero.GetY() < Moth::GameWindow::GetWindow()->GetHeight() - 400))
 	{
-		exit(0);
+		win_Lose_Screen.SetActiveImage(2);
 	}
 
 	background.Draw();
@@ -144,8 +166,9 @@ void SpringApp::OnUpdate()
 	umbrella.Draw();
 	healthBar.SetY(600);
 	healthBar.Draw();
+	win_Lose_Screen.Draw();
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		mDangers[i].Draw();
 	}

@@ -19,12 +19,14 @@ private:
 		"Assets/Images/MothRightFlap.png", "Assets/Images/MothUp.png", "Assets/Images/MothUpFlap.png"} };
 	Entity umbrella{ {"Assets/Images/umbrella.png"}};
 	std::vector<Entity> mDangers{ {{"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}}, 
-		{ {"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}} };
+		{ {"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}}, { {"Assets/Images/drop.png"}} };
+	Entity win_Lose_Screen{ {"Assets/Images/TransparentScreen.png", "Assets/Images/GameOver.png", "Assets/Images/YouWin.png"}};
 	int mEnemyVSpeed0{ -3 };
-	int mEnemyVSpeed1{ -2 };
+	int mEnemyVSpeed1{ -7 };
 	int mEnemyVSpeed2{ -6 };
-	int mEnemyVSpeed3{ -1 };
+	int mEnemyVSpeed3{ -4 };
 	int mEnemyVSpeed4{ -3 };
+	int mEnemyVSpeed5{ -6 };
 
 	int mHorizontalSpeed{ 0 };  
 	int mVerticalSpeed{ 0 };
